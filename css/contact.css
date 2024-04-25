@@ -3,7 +3,7 @@
 }
 
 .contact-section {
-    background-image: url('../img/Fondo-c.png');
+    background-color: black;
     background-size: 100vw 100vh; /* Cubrir toda la pantalla */
     background-position: center;
     background-repeat: no-repeat;
@@ -17,4 +17,8 @@
 
 .no-m{
     margin-top: 0 !important;
+}
+
+.container-xxl h1{
+    color: white;
 }
