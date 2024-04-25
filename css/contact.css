@@ -22,3 +22,9 @@
 .container-xxl h1{
     color: white;
 }
+
+.center-service {
+    display: flex;
+    align-content: flex-end;
+    flex-wrap: wrap;
+}
