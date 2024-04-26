@@ -28,3 +28,31 @@
     align-content: flex-end;
     flex-wrap: wrap;
 }
+
+.center-brand{
+    width: 100%;
+    text-align: center;
+}
+
+.brand-square {
+    background-color: #FF800F;
+    border: 0px solid #FF800F;
+    border-radius: 10px;
+    padding: 0px 10px;
+    box-shadow: 0px 0px 10px #888888;
+    display: inline-block;
+    color: white;
+    text-transform: uppercase;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.brand {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    user-select: none;
+}
+
+.center-brands{
+    justify-content: center;
+}
