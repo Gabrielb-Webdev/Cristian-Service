@@ -458,3 +458,10 @@
     width: 100%;
     height: auto;
 }
+
+@media (min-width: 1200px) {
+    .navbar-expand-lg .navbar-nav{
+        position: relative;
+        right: 10%;
+    }   
+}
