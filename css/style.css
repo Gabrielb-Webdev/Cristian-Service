@@ -465,3 +465,7 @@
         right: 10%;
     }   
 }
+
+.no-select{
+    user-select: none;
+}
