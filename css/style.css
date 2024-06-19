@@ -1,4 +1,5 @@
 /********** Template CSS **********/
+
 :root {
     --primary: #FF800F;
     --secondary: #001064;
@@ -16,6 +17,7 @@
 
 
 /*** Spinner ***/
+
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -31,6 +33,7 @@
 
 
 /*** Button ***/
+
 .btn {
     transition: .5s;
 }
@@ -79,6 +82,7 @@
 
 
 /*** Navbar ***/
+
 .navbar.sticky-top {
     top: -100px;
     transition: .5s;
@@ -114,12 +118,10 @@
     .navbar .navbar-brand img {
         max-height: 45px;
     }
-
     .navbar .navbar-nav {
         margin-top: 20px;
         margin-bottom: 15px;
     }
-
     .navbar .nav-item .dropdown-menu {
         padding-left: 30px;
     }
@@ -136,7 +138,6 @@
         visibility: hidden;
         transition: .5s;
     }
-
     .navbar .nav-item:hover .dropdown-menu {
         top: 100%;
         visibility: visible;
@@ -147,6 +148,7 @@
 
 
 /*** Header ***/
+
 .carousel-caption {
     top: 0;
     left: 0;
@@ -179,7 +181,6 @@
         position: relative;
         min-height: 450px;
     }
-    
     #header-carousel .carousel-item img {
         position: absolute;
         width: 100%;
@@ -205,42 +206,40 @@
 
 
 /*** Facts ***/
+
 .facts {
     background: rgba(1, 10, 53, .8);
 }
 
 
 /*** Quote ***/
+
 @media (min-width: 992px) {
     .container.quote {
         max-width: 100% !important;
     }
-
     .container.quote .quote-text {
         padding-left: calc(((100% - 960px) / 2) + .75rem);
     }
-
     .container.quote .quote-form {
         padding-right: calc(((100% - 960px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1200px) {
-    .container.quote .quote-text  {
+    .container.quote .quote-text {
         padding-left: calc(((100% - 1140px) / 2) + .75rem);
     }
-
-    .container.quote .quote-form  {
+    .container.quote .quote-form {
         padding-right: calc(((100% - 1140px) / 2) + .75rem);
     }
 }
 
 @media (min-width: 1400px) {
-    .container.quote .quote-text  {
+    .container.quote .quote-text {
         padding-left: calc(((100% - 1320px) / 2) + .75rem);
     }
-
-    .container.quote .quote-form  {
+    .container.quote .quote-form {
         padding-right: calc(((100% - 1320px) / 2) + .75rem);
     }
 }
@@ -263,6 +262,7 @@
 
 
 /*** Service ***/
+
 .service-item .service-icon {
     width: 90px;
     height: 90px;
@@ -278,6 +278,7 @@
 
 
 /*** Team ***/
+
 .team-item .team-img::before,
 .team-item .team-img::after {
     position: absolute;
@@ -321,6 +322,7 @@
 
 
 /*** Testimonial ***/
+
 .animated.pulse {
     animation-duration: 1.5s;
 }
@@ -396,6 +398,7 @@
 
 
 /*** Footer ***/
+
 .footer {
     color: #7F8499;
 }
@@ -449,23 +452,105 @@
     color: #FFFFFF;
 }
 
-.test{
+.test {
     width: 10%;
     height: auto;
 }
 
-.test-2{
+.test-2 {
     width: 100%;
     height: auto;
 }
 
 @media (min-width: 1200px) {
-    .navbar-expand-lg .navbar-nav{
+    .navbar-expand-lg .navbar-nav {
         position: relative;
         right: 10%;
-    }   
+    }
 }
 
-.no-select{
+.no-select {
     user-select: none;
+}
+
+.wrapper {
+    position: fixed;
+    bottom: -3rem;
+    /* Distancia desde la parte inferior de la ventana */
+    right: 5rem;
+    /* Distancia desde el borde derecho de la ventana */
+    list-style: none;
+    height: 120px;
+    width: 50px;
+    /* Ancho del botón */
+    font-family: "Poppins", sans-serif;
+    z-index: 1000;
+    /* Asegura que esté sobre otros elementos */
+}
+
+.wrapper .icon {
+    position: relative;
+    background: #25d366;
+    /* Color de fondo de WhatsApp */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .icon a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    /* Color del ícono de WhatsApp */
+}
+
+.wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.wrapper .whatsapp:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.wrapper .whatsapp:hover .tooltip,
+.wrapper .whatsapp:hover .tooltip::before {
+    background: #25d366;
+    /* Cambia el color de fondo al hover */
+    color: #fff;
+    /* Cambia el color del texto al hover */
 }
